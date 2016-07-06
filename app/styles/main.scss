@@ -111,6 +111,23 @@ h3:hover {
   }
 }
 
+.texto {
+    display: none;
+    background-color: #9e9ea5;
+    color: #000;
+    font-weight: lighter;
+    height: 100%;
+    text-align: left;
+    width: 19%;
+    margin-left: 80%;
+    padding: 20px;
+    position: absolute;
+    z-index: 1400;
+    &.desplegado {
+      display: block;
+    }
+}
+
 #menu {
   background: #222;
   padding: 22px;

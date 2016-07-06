@@ -72,6 +72,16 @@ function createPlayer(playerInfo) {
 
 $(document).ready(function () {
 
+
+    $('#wtf').on('click', function(){ 
+            if ($('.texto').hasClass('desplegado')) {
+                $('.texto').removeClass('desplegado');
+
+            }else{
+                $('.texto').addClass('desplegado');
+            }
+    });
+
     $('.overlay').on( 'click', function(){
         var indexof = $('.overlay').index( $(this) );
         players[ indexof ].loadVideoById( videos[ Math.floor(Math.random()*videos.length) ] );
@@ -90,6 +100,7 @@ $(document).ready(function () {
             });
 
             players[3].unMute();
+            $('#volumen').removeClass('off')
             videosSize();        
         }else{
 
@@ -129,8 +140,11 @@ $(document).ready(function () {
         //loop players array to stop them all
         $(players).each(function (i) {
             this.loadVideoById( videos[ Math.floor(Math.random()*videos.length) ] );
+            this.mute();
         });
         players[3].unMute();
+        $('#volumen').removeClass('off')
+        $('#play').addClass('paused');
         videosSize(); 
     });
 
