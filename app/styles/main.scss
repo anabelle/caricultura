@@ -2,9 +2,11 @@
 // endbower
 
 body {
-  background: #fafafa;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  color: #333;
+  background: #fff;
+  font-family: 'Oswald', sans-serif;
+  color: #9e9ea5;
+  margin: 0;
+  text-align: center;
 }
 
 body , html {
@@ -12,6 +14,55 @@ body , html {
   padding: 0;
   width: 100%;
   height: 100%;
+}
+
+header {
+  background-color: #222;
+  text-align: right;
+  position: relative;
+  z-index: 1500;
+}
+
+
+h1 {
+  display: inline-block;
+  background-color: #df531c;
+  color: #fff;
+  font-size: 2em;
+  font-weight: lighter;
+  float: left;
+  margin: 0;
+  padding: 0.5em 2.5em;
+  vertical-align: middle;
+}
+
+h2 {
+  margin: 0;
+  display: inline-block;
+  font-weight: lighter;
+  font-size: 1.2em;
+  padding: 0 1.5em;
+  vertical-align: middle;
+  line-height: 4.2em; 
+}
+
+h2 img {
+  height: 50px;
+  vertical-align: middle;
+  position: relative;
+  top: -3px;
+}
+
+h3 {
+  margin: 0;
+  display: inline-block;
+  font-weight: lighter;
+  font-size: 1.2em;
+  padding: 0 3em;
+}
+
+h3:hover {
+  color: #df531c;
 }
 
 .player-big {
