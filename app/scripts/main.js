@@ -78,20 +78,65 @@ $(document).ready(function () {
         console.log( indexof  );
     });
  
-    $('#play').click(function () {
+    $('#play').on( 'click', function () {
+
+        if( $('.paused').length === 0 ){
+
+            $(this).addClass('paused');
+            //loop players array to stop them all
+            $(players).each(function (i) {
+                this.playVideo();
+                this.mute();
+            });
+
+            players[3].unMute();
+            videosSize();        
+        }else{
+
+            $(this).removeClass('paused');
+            //loop players array to stop them all
+            $(players).each(function (i) {
+                this.pauseVideo();
+            });  
+
+        }
+
+    });
+
+
+
+    $('#volumen').on( 'click', function () {
+
+        if( $('.off').length === 0 ){
+
+            $(this).addClass('off');
+            //loop players array to stop them all
+            players[3].mute();
+
+            videosSize();        
+        }else{
+
+            $(this).removeClass('off');
+            //loop players array to stop them all
+            players[3].unMute();
+
+        }
+
+    });
+
+
+    $('#random').click(function () {
         //loop players array to stop them all
         $(players).each(function (i) {
-            console.log(this);
-            this.playVideo();
+            this.loadVideoById( videos[ Math.floor(Math.random()*videos.length) ] );
         });
-
-        videosSize();
+        players[3].unMute();
+        videosSize(); 
     });
 
     $('#stop').click(function () {
         //loop players array to stop them all
         $(players).each(function (i) {
-            console.log(this);
             this.stopVideo();
         });
     });

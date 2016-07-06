@@ -28,7 +28,7 @@ h1 {
   background-color: #df531c;
   color: #fff;
   font-size: 2em;
-  font-weight: lighter;
+  font-weight: bold;
   float: left;
   margin: 0;
   padding: 0.5em 2.5em;
@@ -65,38 +65,14 @@ h3:hover {
 }
 
 .botones {
-  background: #222;
-  padding: 22px;
-  position: relative;
-  width: 100%;
+  background-size: 100% 100%;
+  height: 30px;
+  width: 30px;
 }
 
-.botones img {
-  height: 40px;
-  vertical-align: middle;
-}
-
-.compartir {
-  display: inline-block;
-  margin-right: 6%;
-  padding: 0;
-  vertical-align: middle;
-  float: right;
-}
-
-.random {
-  display: inline-block;
-  margin-right: 73%;
-  padding: 0;
-  vertical-align: middle;
-}
-
-.volumen {
-  display: inline-block;
-  margin-left: 3%;
-  padding: 0;
-  vertical-align: middle;
-  float: left;
+.overlay {
+  font-size: 5em;
+  font-weight: bold;
 }
 
 .player-big {
@@ -135,6 +111,78 @@ h3:hover {
   }
 }
 
+#menu {
+  background: #222;
+  padding: 22px;
+  position: relative;
+}
+
+#share {
+  display: inline-block;
+  margin-right: 6%;
+  padding: 0;
+  vertical-align: middle;
+  float: right;
+  background-image: url( ../images/share.svg );
+  &:hover {
+    background-image: url( ../images/share_over.svg );
+  }
+}
+
+#random {
+  display: inline-block;
+  margin-right: 73%;
+  padding: 0;
+  vertical-align: middle;
+  background-image: url( ../images/shuffle.svg );
+  &:hover {
+    background-image: url( ../images/shuffle_over.svg );
+  }
+}
+
+#volumen {
+  display: inline-block;
+  margin-left: 3%;
+  padding: 0;
+  vertical-align: middle;
+  float: left;
+  background-image: url( ../images/vol_on.svg );
+  &:hover {
+    background-image: url( ../images/vol_on_over.svg );
+  }
+}
+
+#volumen.off {
+  background-image: url( ../images/vol_off.svg );
+  &:hover {
+    background-image: url( ../images/vol_off_over.svg );
+  }
+}
+
+
+#play {
+  background-size: 100% 100%;
+  height: 100px;
+  width: 100px;
+  display: inline-block;
+  padding: 0;
+  vertical-align: middle;
+  position: relative;
+  bottom: -50px;
+  z-index: 1650;
+  background-image: url( ../images/play.svg );
+  &:hover {
+    background-image: url( ../images/play_over.svg );
+  }
+}
+
+#play.paused {
+  background-image: url( ../images/pause.svg );
+  &:hover {
+    background-image: url( ../images/pause_over.svg );
+  }
+}
+
 #controls {
   background: #222;
   bottom: 0;
@@ -143,7 +191,6 @@ h3:hover {
   padding: 8px 10px;
   position: absolute;
   text-align: center;
-  width: 100%;
   z-index: 2000;
 
   a {
