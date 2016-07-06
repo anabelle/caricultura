@@ -23,7 +23,6 @@ header {
   z-index: 1500;
 }
 
-
 h1 {
   display: inline-block;
   background-color: #df531c;
@@ -65,6 +64,41 @@ h3:hover {
   color: #df531c;
 }
 
+.botones {
+  background: #222;
+  padding: 22px;
+  position: relative;
+  width: 100%;
+}
+
+.botones img {
+  height: 40px;
+  vertical-align: middle;
+}
+
+.compartir {
+  display: inline-block;
+  margin-right: 6%;
+  padding: 0;
+  vertical-align: middle;
+  float: right;
+}
+
+.random {
+  display: inline-block;
+  margin-right: 73%;
+  padding: 0;
+  vertical-align: middle;
+}
+
+.volumen {
+  display: inline-block;
+  margin-left: 3%;
+  padding: 0;
+  vertical-align: middle;
+  float: left;
+}
+
 .player-big {
   color: #fff;
   height: 100%;
@@ -102,7 +136,7 @@ h3:hover {
 }
 
 #controls {
-  background: black;
+  background: #222;
   bottom: 0;
   color: white;
   left: 0;
