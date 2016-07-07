@@ -55,8 +55,18 @@ function createPlayer(playerInfo) {
         height: playerInfo.height,
         width: playerInfo.width,
         videoId: playerInfo.videoId,
+        events: {
+            'onStateChange': onPlayerStateChange
+        },
         playerVars: { 'autoplay': 0, 'controls': 0 }
     });
+}
+
+function onPlayerStateChange(event) {
+
+    if ( event.data == YT.PlayerState.ENDED ) {
+            event.target.playVideo();
+    }
 }
 
 $(document).ready(function () {
