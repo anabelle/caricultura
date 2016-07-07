@@ -93,6 +93,8 @@ $(document).ready(function () {
         if( $('.paused').length === 0 ){
 
             $(this).addClass('paused');
+            $('body').addClass('playing');
+
             //loop players array to stop them all
             $(players).each(function (i) {
                 this.playVideo();
@@ -111,6 +113,7 @@ $(document).ready(function () {
             });  
 
         }
+        fadeOverlay()
 
     });
 
@@ -145,6 +148,7 @@ $(document).ready(function () {
         players[3].unMute();
         $('#volumen').removeClass('off')
         $('#play').addClass('paused');
+        fadeOverlay()
         videosSize(); 
     });
 
@@ -155,14 +159,47 @@ $(document).ready(function () {
         });
     });
 
-    videosSize();
+    function fadeOverlay(){
+        $('.overlay').css({
+            background: 'transparent',
+            color: 'transparent'
+        });
+    }
     
     function videosSize(){
+        var windowheight = $(window).height();
+        var headerheight = $('header').outerHeight();
+        var controlheight = $('#menu').outerHeight();
+
+        var freeheight = windowheight - headerheight - controlheight;
+        var stripheight = freeheight / 5;
+
+        $('.player_container').height( stripheight );
+
+        $('#player_container_1').css('top', 0 );
+        $('#player_container_2').css('top', stripheight );
+        $('#player_container_3').css('top', stripheight * 2);
+        $('#player_container_4').css('top', stripheight * 3);
+        $('#player_container_5').css('top', stripheight * 4);
+
+
+        $('#player_container_1 iframe').css('top', 0 );
+        $('#player_container_2 iframe').css('top', -stripheight );
+        $('#player_container_3 iframe').css('top', -stripheight * 2);
+        $('#player_container_4 iframe').css('top', -stripheight * 3);
+        $('#player_container_5 iframe').css('top', -stripheight * 4);
+
     	$('iframe').each(function(index, el) {
 	    	$(this).css({
 	    		width: $(window).width(),
-	    		height: $(window).height()
+	    		height: freeheight
 	    	});
 	    });
     }
-})
+
+    $(window).load( function(){
+        videosSize();
+    });
+
+    $(window).resize( videosSize );
+});
