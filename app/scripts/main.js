@@ -174,6 +174,7 @@ $(document).ready(function () {
         var stripheight = freeheight / 5;
 
         $('.player_container').height( stripheight );
+        $('.overlay').css( 'line-height', stripheight+"px" );
 
         $('#player_container_1').css('top', 0 );
         $('#player_container_2').css('top', stripheight );
