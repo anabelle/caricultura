@@ -1,21 +1,10 @@
 
 var videos = [
-                                'Eo56UBLBQ7I',
-                                'tvZ6xRz14z4',
-                                'wNthIu9FFkw',
-                                'fkisILqne1c',
-                                'fkzFHVEz9X0',
-                                'X7JQu06ylFM',
-                                'M7lc1UVf-VE',
-                                'X7JQu06ylFM',
-                                'M7lc1UVf-VE',
-                                'X7JQu06ylFM',
-                                'M7lc1UVf-VE',
-                                'X7JQu06ylFM',
-                                'M7lc1UVf-VE',
-                                'X7JQu06ylFM',
-                                'M7lc1UVf-VE',
-                                'X7JQu06ylFM'
+                                '9Tn0pXzwTHA',
+                                'n1yu_q1pH5o',
+                                'GRrIyvr1opc',
+                                '2xpZOM1enoU',
+                                'H6RjlMZpz_I'
 ];
 
 var tag = document.createElement('script');
