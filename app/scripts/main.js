@@ -8,7 +8,7 @@ var videos = [
 ];
 
 var tag = document.createElement('script');
-tag.src = "https://www.youtube.com/iframe_api";
+tag.src = 'https://www.youtube.com/iframe_api';
 var firstScriptTag = document.getElementsByTagName('script')[0];
 firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
@@ -174,7 +174,7 @@ $(document).ready(function () {
         var stripheight = freeheight / 5;
 
         $('.player_container').height( stripheight );
-        $('.overlay').css( 'line-height', stripheight+"px" );
+        $('.overlay').css( 'line-height', stripheight+'px' );
 
         $('#player_container_1').css('top', 0 );
         $('#player_container_2').css('top', stripheight );
