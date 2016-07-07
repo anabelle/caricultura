@@ -136,18 +136,27 @@ h3 {
   width: 100%;
 }
 
-#share {
+#facebook {
   display: inline-block;
-  margin-right: 6%;
+  margin-right: 5%;
   padding: 0;
   vertical-align: middle;
   float: right;
-  background-image: url( ../images/share.svg );
+  background-image: url( ../images/facebook.svg );
+}
+
+#twitter {
+  display: inline-block;
+  margin-right: 15%;
+  padding: 0;
+  vertical-align: middle;
+  float: right;
+  background-image: url( ../images/twitter.svg );
 }
 
 #random {
   display: inline-block;
-  margin-right: 50%;
+  margin-right: 40%;
   padding: 0;
   vertical-align: middle;
   background-image: url( ../images/shuffle.svg );
@@ -280,14 +289,22 @@ h3 {
     font-size: 4em;
   }
 
-  #share {
+  #facebook {
+    margin-right: 1%;
     &:hover {
-      background-image: url( ../images/share_over.svg );
+      background-image: url( ../images/facebook_over.svg );
+    }
+  }
+
+  #twitter {
+    margin-right: 6%;
+    &:hover {
+      background-image: url( ../images/twitter_over.svg );
     }
   }
 
   #random {
-    margin-right: 73%;
+    margin-right: 80%;
     &:hover {
       background-image: url( ../images/shuffle_over.svg );
     }
