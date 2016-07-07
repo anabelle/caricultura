@@ -137,7 +137,6 @@ $(document).ready(function () {
 
     });
 
-
     $('#random').click(function () {
         //loop players array to stop them all
         $(players).each(function (i) {
