@@ -4,7 +4,16 @@ var videos = [
                                 'n1yu_q1pH5o',
                                 'GRrIyvr1opc',
                                 '2xpZOM1enoU',
-                                'H6RjlMZpz_I'
+                                'H6RjlMZpz_I',
+                                '8JHYLTRMqGw',
+                                'zTaWNUq3ZUc',
+                                '3N98Zc84KP8',
+                                'Rz50ph09e1A',
+                                'RNB-_srEYzQ',
+                                'J8m7uw7_Ies',
+                                '2e_AucBegKw',
+                                '43jgOj6Bb_0',
+                                'oYGusu4p9vY'
 ];
 
 var tag = document.createElement('script');
